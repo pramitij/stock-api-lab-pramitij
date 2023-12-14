@@ -22,6 +22,53 @@ Submissions will have deadlines, failed GitHub Actions would result in point ded
 1. Cloning a Repository: <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>
 2. Any GitHub Setup: Please refer to the Git & GitHub Fundamentals Repository shared to you by your respective TA and refer the README.md section
 
+
+### Specifications of Assignment
+LAB: Stock API:
+
+NOTE: collaborative TEAM work AND INDIVIDUAL work in following description. ALL WORK TO BE PRESENTED IN CLASS AND SUBMITTED TO CANVAS AS ASSIGNMENT.
+
+TEAM EXERCISE: 
+
+Implement a StockMarket class as a lazy Singleton. It must:
+
+A. Add Stock objects;
+
+B. Trade Stock objects (calculate new Stock price based on current price, bid and metric);
+
+C. Remove Stock objects;
+
+D. Show all stocks traded on this market (e.g., Stock state like price, metric, etc.)
+
+Implement your Stock super class with a meaningful toString() and AT LEAST the following attributes:
+
+String name, e.g. IBM
+
+double price, e.g. 131.15
+
+String description, e.g. "IBM Common Stock"
+
+You may include other attributes.
+
+Your Stock class must implement the following Tradable interface and EACH STUDENT INDIVIDUALLY must derive TWO UNIQUE stock subclasses, each with it's own algorithm for calculating the performance metric (getMetric() implementation). provide 6 bids (setBid(double bid)) for each stock subclass and show it's price changing and it's metric changing based on the 6 bids.
+
+public interface Tradable {
+    /**
+     * place a bid to buy a stock
+     * 
+     * @param bid
+     */
+    void setBid(double bid);
+    /**
+     * return a metric indicating measure of positive performance of this stock
+     * where a large positive index means consider buying this well performing stock.
+     * and where a large negative index means consider selling this poorly performing stock.
+     * @return
+     */
+    int getMetric();
+
+}
+
 Please reach out to your respective TA if you need any help in regards with submission/ GitHub
 
 Author:
